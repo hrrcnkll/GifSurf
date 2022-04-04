@@ -5,6 +5,7 @@ const GifCatalog = ({ gifs, sendGif, loading }) => {
 
     return (
         <div className='GifCatalog'>
+            <div className='Grid'>
             {gifs.map((gif, index) => (
                 <Card 
                     gif={gif} 
@@ -12,6 +13,7 @@ const GifCatalog = ({ gifs, sendGif, loading }) => {
                     sendGif={sendGif}
                 />
             ))}
+            </div>
             {loading &&
                 <div className='Loading'>
                     <div className='Loader'/>
